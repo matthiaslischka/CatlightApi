@@ -65,9 +65,15 @@ namespace CatlightApi
 
             using (var webClient = new WebClient())
             {
-                var dashboardJsonString =
-                    webClient.DownloadString($"http://localhost:{portNumber}/Dashboard/GetDashboard");
-                Dashboard = JsonConvert.DeserializeObject<Dashboard>(dashboardJsonString);
+                try
+                {
+                    var dashboardJsonString =
+                        webClient.DownloadString($"http://localhost:{portNumber}/Dashboard/GetDashboard");
+                    Dashboard = JsonConvert.DeserializeObject<Dashboard>(dashboardJsonString);
+                }
+                catch (WebException)
+                {
+                }
             }
         }
     }
