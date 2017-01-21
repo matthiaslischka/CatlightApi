@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CatlightApi")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Very basic API for the CatLight Status Notifications.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Matthias Lischka")]
 [assembly: AssemblyProduct("CatlightApi")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
