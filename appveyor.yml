@@ -5,8 +5,9 @@ skip_tags: true
 before_build:
     nuget restore
 
-artifacts:  
-    path: '**\*.nupkg'
+artifacts: 
+ 
+    path: 'CatlightApi\bin\Release\*.nupkg'
     name: NuGet
     
 deploy:
