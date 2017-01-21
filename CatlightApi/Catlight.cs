@@ -11,7 +11,7 @@ namespace CatlightApi
 
         public Catlight()
         {
-            _portHelper = new PortHelper();
+            _portHelper = new WindowsLogFileBasedPortHelper();
         }
 
         /// <summary>
@@ -58,7 +58,6 @@ namespace CatlightApi
         private void UpdateDashboard()
         {
             Dashboard = null;
-
             var portNumber = _portHelper.GetPortNumber();
             if (!portNumber.HasValue)
                 return;

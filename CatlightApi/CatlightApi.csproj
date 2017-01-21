@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Catlight.cs" />
     <Compile Include="Dashboard.cs" />
-    <Compile Include="PortHelper.cs" />
+    <Compile Include="WindowsLogFileBasedPortHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
