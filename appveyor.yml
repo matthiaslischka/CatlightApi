@@ -4,8 +4,8 @@ skip_tags: true
 
 skip_commits:
     files:
-        README.md
-        appveyor.yml
+        - README.md
+        - appveyor.yml
 
 before_build:
     nuget restore
