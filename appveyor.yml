@@ -1,0 +1,18 @@
+configuration: Release
+
+skip_tags: true
+
+before_build:
+    nuget restore
+
+artifacts:  
+    path: '**\*.nupkg'
+    name: NuGet
+    
+deploy:
+    provider: NuGet
+    name: production
+    api_key:
+        secure: JseUlCov4GsrYUQ0BK4+TY8q9jQZlHvQjzeUqTf51efIIQr7f7zEJ0ahiInFh+xY
+  on:
+    branch: master
