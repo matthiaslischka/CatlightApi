@@ -11,7 +11,7 @@ namespace CatlightApiTests
         public void CallStatus_ThrowsNoException()
         {
             var connector = new CatlightConnector();
-            var doesNeedAttention = connector.GetStatus();
+            var status = connector.GetStatus();
         }
 
         [Ignore]
