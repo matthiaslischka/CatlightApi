@@ -11,7 +11,6 @@ before_build:
     nuget restore
 
 artifacts: 
- 
     path: 'CatlightApi\bin\Release\*.nupkg'
     name: NuGet
     
@@ -21,4 +20,4 @@ deploy:
     api_key:
         secure: JseUlCov4GsrYUQ0BK4+TY8q9jQZlHvQjzeUqTf51efIIQr7f7zEJ0ahiInFh+xY
     on:
-        branch: master
+        branch: /release/*

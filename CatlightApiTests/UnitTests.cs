@@ -10,8 +10,8 @@ namespace CatlightApiTests
         [TestMethod]
         public void CallStatus_ThrowsNoException()
         {
-            var catlight = new Catlight();
-            var doesNeedAttention = catlight.DoesNeedAttention();
+            var connector = new CatlightConnector();
+            var doesNeedAttention = connector.GetStatus();
         }
 
         [Ignore]
@@ -21,31 +21,12 @@ namespace CatlightApiTests
             var stopwatch = new Stopwatch();
 
             stopwatch.Start();
-            var catlight1 = new Catlight();
-            var isAcknowledged = catlight1.IsAcknowledged();
+            var connector = new CatlightConnector();
+            var catlightStatus = connector.GetStatus();
             stopwatch.Stop();
-            var isAcknowledgedElapsedTime = stopwatch.Elapsed;
+            var catlightStatusElapsedTime = stopwatch.Elapsed;
 
-            stopwatch.Reset();
-
-            stopwatch.Start();
-            var catlight2 = new Catlight();
-            var severityLevel = catlight2.GetSeverityLevel();
-            stopwatch.Stop();
-            var severityLevelElapsedTime = stopwatch.Elapsed;
-
-            stopwatch.Reset();
-
-            stopwatch.Start();
-            var catlight3 = new Catlight();
-            var doesNeedAttention = catlight3.DoesNeedAttention();
-            stopwatch.Stop();
-            var doesNeedAttentionElapsedTime = stopwatch.Elapsed;
-
-            Debug.WriteLine(
-                $"isAcknowledged = {isAcknowledged} in {isAcknowledgedElapsedTime}\n" +
-                $"severityLevel = {severityLevel} in {severityLevelElapsedTime}\n" +
-                $"doesNeedAttention = {doesNeedAttention} in {doesNeedAttentionElapsedTime}");
+            Debug.WriteLine($"catlightStatus = {catlightStatus} in {catlightStatusElapsedTime}");
         }
     }
 }
