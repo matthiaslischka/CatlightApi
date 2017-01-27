@@ -7,12 +7,12 @@ using System.Text.RegularExpressions;
 
 namespace CatlightApi
 {
-    public interface IPortHelper
+    internal interface IPortHelper
     {
         int? GetPortNumber();
     }
 
-    public class WindowsLogFileBasedPortHelper : IPortHelper
+    internal class WindowsLogFileBasedPortHelper : IPortHelper
     {
         public int? GetPortNumber()
         {

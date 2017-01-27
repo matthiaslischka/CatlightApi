@@ -2,14 +2,6 @@
 
 namespace CatlightApi
 {
-    internal enum SeverityLevel
-    {
-        Ok,
-        Info,
-        Warning,
-        Critical
-    }
-
     public enum CatlightStatus
     {
         CatlightNotFound,
@@ -19,6 +11,14 @@ namespace CatlightApi
         WarningAcknowledged,
         Warning,
         CriticalAcknowledged,
+        Critical
+    }
+
+    internal enum SeverityLevel
+    {
+        Ok,
+        Info,
+        Warning,
         Critical
     }
 
