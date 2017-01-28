@@ -5,7 +5,6 @@ skip_tags: true
 skip_commits:
     files:
         - README.md
-        - appveyor.yml
 
 before_build:
     nuget restore
@@ -20,4 +19,4 @@ deploy:
     api_key:
         secure: JseUlCov4GsrYUQ0BK4+TY8q9jQZlHvQjzeUqTf51efIIQr7f7zEJ0ahiInFh+xY
     on:
-        branch: /release/*
+        branch: /release\/.+/
