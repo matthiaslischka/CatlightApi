@@ -24,7 +24,7 @@ namespace CatlightApi
             if (!dashboard.Servers.Any())
                 return CatlightStatus.NoProjects;
 
-            switch (dashboard.SeverityLevel)
+            switch (dashboard.Severity)
             {
                 case SeverityLevel.Ok:
                     return CatlightStatus.Ok;
