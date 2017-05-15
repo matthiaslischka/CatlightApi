@@ -25,7 +25,7 @@ namespace CatlightApi
     internal class Dashboard
     {
         public SeverityLevel Severity { get; set; }
-        public bool IsAcknowledged { get; set; }
+        public bool NeedsAttention { get; set; }
         public List<Server> Servers { get; set; }
     }
 

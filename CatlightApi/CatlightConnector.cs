@@ -33,14 +33,14 @@ namespace CatlightApi
                     return CatlightStatus.Info;
 
                 case SeverityLevel.Warning:
-                    return dashboard.IsAcknowledged
-                        ? CatlightStatus.WarningAcknowledged
-                        : CatlightStatus.Warning;
+                    return dashboard.NeedsAttention
+                        ?  CatlightStatus.Warning
+                        : CatlightStatus.WarningAcknowledged;
 
                 case SeverityLevel.Critical:
-                    return dashboard.IsAcknowledged
-                        ? CatlightStatus.CriticalAcknowledged
-                        : CatlightStatus.Critical;
+                    return dashboard.NeedsAttention
+                        ? CatlightStatus.Critical
+                        : CatlightStatus.CriticalAcknowledged;
 
                 default:
                     throw new ArgumentOutOfRangeException();
