@@ -49,14 +49,14 @@ namespace CatlightApi
         {
             return Directory.GetFiles(logsPath)
                 .Where(s => s.Contains("log"))
-                .OrderByDescending(ExtractSortNumber)
+                .OrderByDescending(GetLogFileSortNumber)
                 .Select(f => new FileInfo(f));
         }
 
-        private int ExtractSortNumber(string filePath)
+        private int GetLogFileSortNumber(string filePath)
         {
             var logFileNumbering = Regex.Match(filePath, @"\d+").Value;
-            return Convert.ToInt32(string.IsNullOrWhiteSpace(logFileNumbering) ? "0" : logFileNumbering);
+            return string.IsNullOrWhiteSpace(logFileNumbering) ? int.MaxValue : Convert.ToInt32(logFileNumbering);
         }
 
         private static string ReadLogText(FileInfo logFile)
